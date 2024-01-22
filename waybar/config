@@ -1,0 +1,87 @@
+{
+  "layer": "top",
+    "modules-left": ["custom/arch", "hyprland/workspaces", "custom/mediaplayer", "cava"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
+    "custom/arch": {
+      "format": "⏻",
+      "tooltip": false,
+      "on-click": "/home/ricky/.config/rofi/bin/powermenu "
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
+    },
+    "clock": {
+      "format": "<span color='#89b4fa'> </span> {:%H:%M}",
+      "tooltip-format": "<big><span background='#11111b' color='#89b4fa'>{:%a, %d %b %Y}</span></big>\n<tt><small>{calendar}</small></tt>",
+      "on-click": "gnome-calendar",
+      "calendar": {
+        "mode" : "month",
+        "format": {
+          "months":     "<span background='#11111b' color='#eba0ac'><b>{}</b></span>",
+          "days":       "<span background='#11111b' color='#89b4fa'><b>{}</b></span>",
+          "weekdays":   "<span background='#11111b' color='#fab387'><b>{}</b></span>",
+          "today":      "<span background='#11111b' color='#eba0ac'><b>{}</b></span>"
+        }
+
+      }
+    },
+    "custom/mediaplayer": {
+      "exec": "/usr/bin/python3 /home/ricky/.config/waybar/mediaplayer.py --player spotify",
+      "format": "{}  ",
+      "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous"
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "<span color='#89b4fa'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""],
+      "on-click": "/home/ricky/.config/waybar/nightlight_toggle.sh"
+    },
+    "pulseaudio": {
+      "format": "<span color='#89b4fa'>{icon}</span>  {volume}%",
+      "format-muted": "",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "headset": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1,
+      "on-click": "pavucontrol",
+      "on-click-right": "pamixer -t"
+    },
+    "bluetooth": {
+      "format": "<span color='#89b4fa'></span> {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span color='#89b4fa'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}",
+      "on-click": "blueman-manager"
+    },
+    "network": {
+      "interface": "wlo1",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#89b4fa'> </span>  {essid}",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#89b4fa'>󰖪 </span>No Network",
+      "tooltip": false,
+      "on-click": "nm-connection-editor",
+      "on-click-right": "wifi toggle"
+    },
+    "battery": {
+      "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
+      "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "format-charging": "<span color='#89b4fa'>󰂄</span> {capacity}%",
+      "tooltip": true,
+    },
+}
