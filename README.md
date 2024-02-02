@@ -2,7 +2,7 @@
 📸 Screenshots  
 
 ![Desktop](images/desktop.png)
-
+![Workspace](images/workspace.png)
 
 🔥 Info
 
