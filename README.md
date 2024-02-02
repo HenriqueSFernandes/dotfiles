@@ -1,7 +1,8 @@
 # Dotfiles by RICKY
 📸 Screenshots  
 
-`WIP`
+![Desktop](images/desktop.png)
+
 
 🔥 Info
 
@@ -11,7 +12,7 @@
 - Shell: [zsh](https://www.zsh.org/) with [ohmyzsh](https://ohmyz.sh/) and [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - GTK Theme: [catppuccin-mocha](https://github.com/catppuccin/gtk)
 - File Manager: [nautilus](https://apps.gnome.org/pt/Nautilus/)
-- System Information: [neofetch](https://github.com/dylanaraps/neofetch)
+- System Information: [neofetch](https://github.com/dylanaraps/neofetch) / [bashtop](https://github.com/aristocratos/bashtop)
 - Top Bar: [waybar](https://github.com/Alexays/Waybar)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
 - Login Manager: [SDDM](https://github.com/sddm/sddm) with a modified version of [sugar candy](https://store.kde.org/p/1312658/)
