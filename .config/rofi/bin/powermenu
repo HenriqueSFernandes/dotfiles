@@ -90,14 +90,13 @@ case $chosen in
         fi
         ;;
     $lock)
-        sh $HOME/.config/hypr/lockscreen.sh
+        hyprlock
         ;;
     $suspend)
 		ans=$(rdialog &)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
 			mpc -q pause
 			amixer set Master mute
-			sh $HOME/.local/bin/lock
 			systemctl suspend
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 			exit
@@ -108,7 +107,7 @@ case $chosen in
     $logout)
 		ans=$(rdialog &)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-			bspc quit
+			hyprctl dispatch exit
 		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
 			exit
         else

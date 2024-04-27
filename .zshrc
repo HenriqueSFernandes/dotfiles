@@ -81,6 +81,7 @@ plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -113,7 +114,52 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/home/ricky/.local/bin
 export PATH=$PATH:/home/ricky/Applications
 export PATH=$PATH:/snap/bin
-
+export PATH=$PATH:/home/ricky/.pub-cache/bin
 export PATH=$PATH:/home/ricky/.spicetify
 
 alias r="ranger"
+alias bt="bashtop"
+export CHROME_EXECUTABLE=/var/lib/flatpak/exports/bin/com.google.Chrome
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+
+_fzf_compgen_path(){
+  fd --hidden --exclude .git . "$1"
+}
+
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+
+source ~/fzf-git.sh/fzf-git.sh
+
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always --icons=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo $'{}"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "bat -n --color=always --line-range :500 {}" "$@" ;;
+  esac
+}
+
+
+
+export EDITOR='lvim'
+export VISUAL='lvim'
+eval "$(fzf --zsh)"
+export BAT_THEME="Catppuccin Mocha"
+alias ls="exa --color=always --icons=always "
+
+eval $(thefuck --alias)
+alias cat="bat"
