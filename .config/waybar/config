@@ -1,12 +1,20 @@
 {
   "layer": "top",
-    "modules-left": ["custom/arch", "hyprland/workspaces", "custom/mediaplayer", "cava"],
+    "modules-left": ["custom/arch", "idle_inhibitor", "hyprland/workspaces", "custom/mediaplayer", "cava"],
     "modules-center": ["clock"],
     "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
     "custom/arch": {
       "format": "<span color='#89b4fa'>⏻</span>",
       "tooltip": false,
       "on-click": "/home/ricky/.config/rofi/bin/powermenu "
+    },
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "tooltip": false,
+      "format-icons": {
+          "activated": "󰅶",
+          "deactivated": "󰾪"
+      }
     },
     "hyprland/workspaces": {
       "format": "{name}",
@@ -49,12 +57,12 @@
     },
     "pulseaudio": {
       "format": "<span color='#89b4fa'>{icon}</span>  {volume}%",
-      "format-muted": "",
+      "format-muted": "󰸈",
       "tooltip": false,
       "format-icons": {
         "headphone": "",
         "headset": "",
-        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+        "default": ["󰸈", "", "󰕾", "󰕾", "󰕾", "", "", ""]
       },
       "scroll-step": 1,
       "on-click": "pavucontrol",
@@ -82,6 +90,6 @@
       "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
       "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
       "format-charging": "<span color='#89b4fa'>󰂄</span> {capacity}%",
-      "tooltip": true,
-    },
+      "tooltip": true
+    }
 }
