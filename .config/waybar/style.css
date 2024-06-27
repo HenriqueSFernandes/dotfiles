@@ -21,6 +21,11 @@ window#waybar {
   padding-right: 10px;
 }
 
+#tray menu {
+  background-color: #11111b;
+  border: 2px solid #89b4fa
+}
+
 #idle_inhibitor {
   font-size: 20px;
   color: #89b4fa;
@@ -37,7 +42,7 @@ window#waybar {
   color: #89b4fa;
 }
 
-#clock, #backlight, #pulseaudio, #bluetooth, #network, #battery, .custom-spotify{
+#clock, #backlight, #pulseaudio, #bluetooth, #network, #battery, .custom-spotify, #tray{
   border-radius: 10px;
   background-color: #11111b;
   color: #89b4fa;

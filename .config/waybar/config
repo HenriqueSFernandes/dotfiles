@@ -2,11 +2,15 @@
   "layer": "top",
     "modules-left": ["custom/arch", "idle_inhibitor", "hyprland/workspaces", "custom/mediaplayer", "cava"],
     "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
+    "modules-right": ["tray", "backlight", "pulseaudio", "bluetooth", "network", "battery"],
     "custom/arch": {
       "format": "<span color='#89b4fa'>⏻</span>",
       "tooltip": false,
       "on-click": "/home/ricky/.config/rofi/bin/powermenu "
+    },
+    "tray": {
+      "icon-size": 21,
+      "spacing": 10,
     },
     "idle_inhibitor": {
       "format": "{icon}",
@@ -90,6 +94,8 @@
       "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
       "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
       "format-charging": "<span color='#89b4fa'>󰂄</span> {capacity}%",
-      "tooltip": true
+      "tooltip": true,
+      "on-click": "/home/ricky/.config/waybar/open_dashboard.sh"
+      // "on-click": "notify-send $PATH"
     }
 }

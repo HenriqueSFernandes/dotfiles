@@ -4,30 +4,6 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 -- install plugins
 lvim.plugins = {
-  {
-    "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("neorg").setup {
-        load = {
-          ["core.defaults"] = {}, -- Loads default behaviour
-          ["core.concealer"] = {}, -- Adds pretty icons to your documents
-          ["core.dirman"] = { -- Manages Neorg workspaces
-            config = {
-              workspaces = {
-                aed = "~/Desktop/aed/notes",
-                bd = "~/Desktop/bd/notes/",
-                iadp = "~/Desktop/iadp/notes/",
-                so = "~/Desktop/so/notes/",
-                ldts = "~/Desktop/ldts/notes/"
-              },
-            },
-          },
-        },
-      }
-    end,
-  },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { "mhartington/formatter.nvim", name = "formatter", priority = 900},
 }

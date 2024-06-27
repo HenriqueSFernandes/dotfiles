@@ -110,7 +110,7 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+#eval "$(oh-my-posh init zsh)"
 export PATH=$PATH:/home/ricky/.local/bin
 export PATH=$PATH:/home/ricky/Applications
 export PATH=$PATH:/snap/bin
@@ -119,7 +119,7 @@ export PATH=$PATH:/home/ricky/.spicetify
 
 alias r="ranger"
 alias bt="bashtop"
-export CHROME_EXECUTABLE=/var/lib/flatpak/exports/bin/com.google.Chrome
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -163,3 +163,8 @@ alias ls="exa --color=always --icons=always "
 
 eval $(thefuck --alias)
 alias cat="bat"
+alias fds="fuck"
+
+eval "$(zoxide init zsh)"
+alias cd="z"
+

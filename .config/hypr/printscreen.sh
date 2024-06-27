@@ -1,32 +1,13 @@
-#!/usr/bin/env bash
-rofi_command="rofi -theme $HOME/.config/rofi/config/screenshot.rasi"
+#!/bin/bash
 
 time=`date +%Y-%m-%d-%I-%M-%S`
 geometry=`xrandr | head -n1 | cut -d',' -f2 | tr -d '[:blank:],current'`
 dir="`xdg-user-dir PICTURES`/Screenshots"
 file="Screenshot_${time}_${geometry}.png"
 
-# Icons
 icon1="$HOME/.config/dunst/icons/collections.svg"
 icon2="$HOME/.config/dunst/icons/timer.svg"
 
-# Buttons
-layout=`cat $HOME/.config/rofi/config/screenshot.rasi | grep BUTTON | cut -d'=' -f2 | tr -d '[:blank:],*/'`
-if [[ "$layout" == "TRUE" ]]; then
-	screen=""
-	area=""
-	window="缾"
-	infive="靖"
-	inten="福"
-else
-	screen=" Capture Desktop"
-	area=" Capture Area"
-	window="缾 Capture Window"
-	infive="󰔝  Take in 3s"
-	inten="󰔜   Take in 10s"
-fi
-
-# Notify and view screenshot
 notify_view () {
 	dunstify -u low --replace=699 -i $icon1 "Copied to clipboard."
 	viewnior ${dir}/"$file"
@@ -37,7 +18,6 @@ notify_view () {
 	fi
 }
 
-# countdown
 countdown () {
 	for sec in `seq $1 -1 1`; do
 		dunstify -t 1000 --replace=699 -i $icon2 "Taking shot in : $sec"
@@ -45,7 +25,6 @@ countdown () {
 	done
 }
 
-# take shots
 shotnow () {
   sleep 0.5
   /usr/bin/hyprshot -m output -m eDP-1 -o ${dir} -f ${file}
@@ -78,25 +57,22 @@ if [[ ! -d "$dir" ]]; then
 	mkdir -p "$dir"
 fi
 
-# Variable passed to rofi
-options="$screen\n$area\n$window\n$infive\n$inten"
+usage() {
+    echo "Usage: $0 [--screen | --area | --window | --infive | --inten]"
+    exit 1
+}
 
-chosen="$(echo -e "$options" | $rofi_command -p 'Take A Shot' -dmenu -selected-row 0)"
-case $chosen in
-    $screen)
-		shotnow
-        ;;
-    $area)
-		shotarea
-        ;;
-    $window)
-		shotwin
-		;;
-    $infive)
-		shot5
-		;;
-    $inten)
-		shot10
-        ;;
-esac
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --screen) shotnow; exit 0 ;;
+        --area) shotarea; exit 0 ;;
+        --window) shotwin; exit 0 ;;
+        --infive) shot5; exit 0 ;;
+        --inten) shot10; exit 0 ;;
+        *) usage ;;
+    esac
+    shift
+done
+
+usage
 
