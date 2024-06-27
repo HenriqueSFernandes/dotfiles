@@ -164,6 +164,7 @@ alias ls="exa --color=always --icons=always "
 eval $(thefuck --alias)
 alias cat="bat"
 alias fds="fuck"
+alias lv="lvim"
 
 eval "$(zoxide init zsh)"
 alias cd="z"

@@ -27,7 +27,7 @@ countdown () {
 
 shotnow () {
   sleep 0.5
-  /usr/bin/hyprshot -m output -m eDP-1 -o ${dir} -f ${file}
+  /usr/bin/hyprshot -m output -m HDMI-A-1 -o ${dir} -f ${file}
 	notify_view
 }
 
