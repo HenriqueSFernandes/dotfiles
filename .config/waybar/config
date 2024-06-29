@@ -81,7 +81,7 @@
       "on-click": "blueman-manager"
     },
     "network": {
-      "interface": "wlo1",
+      "interface": "wlan0",
       "format": "{ifname}",
       "format-wifi": "<span color='#89b4fa'> </span>  {essid}",
       "format-ethernet": "{ipaddr}/{cidr} ",
