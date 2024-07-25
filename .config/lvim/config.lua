@@ -8,6 +8,9 @@ lvim.plugins = {
   { "mhartington/formatter.nvim", name = "formatter", priority = 900},
 }
 
+vim.cmd("set hlsearch")
+vim.cmd("set relativenumber")
+
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { name = "black" },
