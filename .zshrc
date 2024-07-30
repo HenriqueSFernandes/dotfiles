@@ -18,8 +18,16 @@ export PATH=$PATH:/home/ricky/.spicetify
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/ricky/.local/share/flatpak/exports/share
 
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
-alias r="ranger"
+alias r="yazi"
 alias bt="bashtop"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
