@@ -6,7 +6,7 @@ vim.cmd("set number")
 vim.cmd("set rnu")
 vim.cmd("autocmd InsertEnter * :set nornu")
 vim.cmd("autocmd InsertLeave * :set rnu")
+vim.cmd("set mousemoveevent")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-
