@@ -4,7 +4,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,7 +27,7 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
-alias r="yazi"
+alias r="ranger"
 alias bt="bashtop"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
