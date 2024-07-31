@@ -12,7 +12,9 @@ return {
         },
       },
     })
-    vim.keymap.set({"n", "v", "i"}, "<Tab>", ":BufferLineCycleNext<CR>")
-    vim.keymap.set({"n", "v", "i"}, "<S-Tab>", ":BufferLineCyclePrev<CR>")
+    vim.keymap.set({ "n", "v" }, "<Tab>", ":BufferLineCycleNext<CR>")
+    vim.keymap.set({ "n", "v" }, "<S-Tab>", ":BufferLineCyclePrev<CR>")
+    vim.keymap.set({ "n", "v" }, "<leader>b", ":BufferLinePick<CR>")
+    vim.keymap.set({ "n", "v" }, "<leader>w", ":bd<CR>")
   end,
 }
