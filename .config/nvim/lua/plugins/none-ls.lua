@@ -7,7 +7,8 @@ return {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettierd,
         null_ls.builtins.formatting.black,
-      },
+        null_ls.builtins.formatting.pretty_php
+},
     })
     vim.keymap.set({ "n", "i", "v" }, "<A-S-f>", vim.lsp.buf.format, {})
   end,
