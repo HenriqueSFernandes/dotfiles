@@ -1,5 +1,3 @@
-/usr/bin/bashtop: line 660: ((: <80 | <24: syntax error: operand expected (error token is "<80 | <24")
-stty: 'standard input': Inappropriate ioctl for device
 stty: 'standard input': Inappropriate ioctl for device
 /usr/bin/bashtop: line 660: ((: <80 | <24: syntax error: operand expected (error token is "<80 | <24")
 stty: 'standard input': Inappropriate ioctl for device
@@ -500,3 +498,5 @@ New instance of bashtop version: 0.9.25 Pid: 7574
 /usr/bin/bashtop: line 4806: ${pycoproc[1]}: ambiguous redirect
  
 New instance of bashtop version: 0.9.25 Pid: 6804
+ 
+New instance of bashtop version: 0.9.25 Pid: 26274
