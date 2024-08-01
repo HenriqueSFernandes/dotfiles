@@ -62,6 +62,8 @@ _fzf_comprun() {
   esac
 }
 
+export PATH="$PATH:$HOME/Applications"
+
 
 export CHROME_EXECUTABLE=/usr/bin/firefox
 export EDITOR='lvim'
