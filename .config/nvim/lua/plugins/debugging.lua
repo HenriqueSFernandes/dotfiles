@@ -3,6 +3,7 @@ return {
   dependencies = {
     "rcarriga/nvim-dap-ui",
     "nvim-neotest/nvim-nio",
+    "mfussenegger/nvim-dap-python",
   },
   config = function()
     local dap, dapui = require("dap"), require("dapui")
@@ -50,6 +51,9 @@ return {
         end,
       },
     }
+
+    -- Python Debugger
+    require("dap-python").setup("python")
 
     vim.keymap.set("n", "<F5>", dap.continue, {})
     vim.keymap.set("n", "<F10>", dap.step_over, {})
