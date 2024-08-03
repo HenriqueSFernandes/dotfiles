@@ -15,4 +15,11 @@ return {
       desc = "Buffer Local Keymaps (which-key)",
     },
   },
+  config = function()
+    local wk = require("which-key")
+    wk.add({
+      { "<leader>c", group = "Copilot" },
+      { "<leader>cp", group = "Prompts" },
+    })
+  end,
 }
