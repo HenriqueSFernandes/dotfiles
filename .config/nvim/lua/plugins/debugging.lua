@@ -60,6 +60,6 @@ return {
     vim.keymap.set("n", "<F11>", dap.step_into, {})
     vim.keymap.set("n", "<F12>", dap.step_out, {})
     vim.keymap.set("n", "<F9>", dap.toggle_breakpoint, {})
-    vim.keymap.set("n", "<leader>d", dapui.toggle, {})
+    vim.keymap.set("n", "<leader>d", dapui.toggle, {desc = "Toggle Debugger UI"})
   end,
 }
