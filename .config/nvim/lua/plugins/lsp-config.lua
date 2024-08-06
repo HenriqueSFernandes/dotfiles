@@ -19,6 +19,15 @@ return {
 		end,
 	},
 	{
+		"akinsho/flutter-tools.nvim",
+		lazy = false,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"stevearc/dressing.nvim", -- optional for vim.ui.select
+		},
+		config = true,
+	},
+	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -36,11 +45,11 @@ return {
 			-- 	end,
 			-- })
 			-- lspconfig.clangd.setup({
-   --      capabilities = capabilities,
-   --    })
+			--      capabilities = capabilities,
+			--    })
 			-- lspconfig.emmet_language_server.setup({
-   --      capabilities = capabilities,
-   --    })
+			--      capabilities = capabilities,
+			--    })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<C-.>", vim.lsp.buf.code_action, {})

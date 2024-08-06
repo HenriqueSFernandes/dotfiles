@@ -10,10 +10,11 @@ return {
 			local chat = require("CopilotChat")
 			chat.setup({
 				window = {
-					layout = "float",
+					layout = "vertical",
+					width = 0.3,
 				},
 			})
-      vim.cmd("Copilot disable")
+			vim.cmd("Copilot disable")
 			vim.keymap.set("n", "<leader>cc", chat.toggle, { desc = "Toggle Chat Window" })
 			vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>", { desc = "Enable Copilot" })
 			vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>", { desc = "Disable Copilot" })
@@ -25,7 +26,12 @@ return {
 			vim.keymap.set("n", "<leader>cpt", ":CopilotChatTests<CR>", { desc = "Generate Tests" })
 			vim.keymap.set("n", "<leader>cpD", ":CopilotChatTests<CR>", { desc = "Generate Tests" })
 			vim.keymap.set("n", "<leader>cpc", ":CopilotChatCommit<CR>", { desc = "Generate Commit Message" })
-			vim.keymap.set("n", "<leader>cpC", ":CopilotChatCommitStaged<CR>", { desc = "Generate Staged Commit Message" })
+			vim.keymap.set(
+				"n",
+				"<leader>cpC",
+				":CopilotChatCommitStaged<CR>",
+				{ desc = "Generate Staged Commit Message" }
+			)
 		end,
 	},
 }

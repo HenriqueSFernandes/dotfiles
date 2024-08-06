@@ -10,6 +10,7 @@ return {
       { "<leader>c",  group = "Copilot" },
       { "<leader>cp", group = "Prompts" },
       { "<leader>x",  group = "Trouble" },
+      { "<leader>t",  group = "Test" },
     })
   end,
 }

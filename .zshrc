@@ -15,8 +15,11 @@ export PATH=$PATH:/home/ricky/Applications
 export PATH=$PATH:/snap/bin
 export PATH=$PATH:/home/ricky/.pub-cache/bin
 export PATH=$PATH:/home/ricky/.spicetify
+export PATH="$HOME/.tmuxifier/bin:$PATH"
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/ricky/.local/share/flatpak/exports/share
+
+eval "$(tmuxifier init -)"
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
