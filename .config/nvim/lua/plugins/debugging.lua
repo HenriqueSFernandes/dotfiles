@@ -89,7 +89,7 @@ return {
 				protocol = "inspector",
 				console = "integratedTerminal",
 				restart = true,
-				runtimeExecutable = "nodemon"
+				runtimeExecutable = "nodemon",
 			},
 			{
 				-- For this to work you need to make sure the node process is started with the `--inspect` flag.
@@ -97,6 +97,46 @@ return {
 				type = "node2",
 				request = "attach",
 				processId = require("dap.utils").pick_process,
+			},
+		}
+
+		-- Flutter Debugger
+		dap.configurations.dart = {
+			{
+				type = "dart",
+				request = "launch",
+				name = "Launch dart",
+				dartSdkPath = "/usr/bin/flutter/bin/cache/dart-sdk/bin/dart",
+				flutterSdkPath = "/usr/bin/flutter/bin/flutter",
+				program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+				cwd = "${workspaceFolder}",
+			},
+			{
+				type = "flutter",
+				request = "launch",
+				name = "Launch flutter",
+				dartSdkPath = "/usr/bin/flutter/bin/cache/dart-sdk/bin/dart",
+				flutterSdkPath = "/usr/bin/flutter/bin/flutter",
+				program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+				cwd = "${workspaceFolder}",
+			},
+		}
+		dap.adapters.dart = {
+			type = "executable",
+			command = "dart", -- if you're using fvm, you'll need to provide the full path to dart (dart.exe for windows users), or you could prepend the fvm command
+			args = { "debug_adapter" },
+			-- windows users will need to set 'detached' to false
+			options = {
+				detached = false,
+			},
+		}
+		dap.adapters.flutter = {
+			type = "executable",
+			command = "flutter", -- if you're using fvm, you'll need to provide the full path to flutter (flutter.bat for windows users), or you could prepend the fvm command
+			args = { "debug_adapter" },
+			-- windows users will need to set 'detached' to false
+			options = {
+				detached = false,
 			},
 		}
 

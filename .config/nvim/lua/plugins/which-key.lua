@@ -11,6 +11,7 @@ return {
       { "<leader>cp", group = "Prompts" },
       { "<leader>x",  group = "Trouble" },
       { "<leader>t",  group = "Test" },
+      { "<leader>f",  group = "Flutter" },
     })
   end,
 }
