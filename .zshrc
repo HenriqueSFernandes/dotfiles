@@ -69,8 +69,8 @@ export PATH="$PATH:$HOME/Applications"
 
 
 export CHROME_EXECUTABLE=/usr/bin/firefox
-export EDITOR='lvim'
-export VISUAL='lvim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 eval "$(fzf --zsh)"
 export BAT_THEME="Catppuccin Mocha"
 alias ls="exa --color=always --icons=always "
@@ -83,4 +83,4 @@ alias lv="lvim"
 alias viteinit="npm create vite@latest"
 eval "$(zoxide init zsh)"
 alias cd="z"
-
+alias mux="tmuxinator"
