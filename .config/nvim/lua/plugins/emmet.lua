@@ -1,3 +1,4 @@
+-- Emmet (web dev utilities)
 return {
   "olrtg/nvim-emmet",
   config = function()

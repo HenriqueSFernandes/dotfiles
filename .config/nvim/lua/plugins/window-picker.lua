@@ -1,3 +1,4 @@
+-- Picks windows
 return {
   "s1n7ax/nvim-window-picker",
   name = "window-picker",

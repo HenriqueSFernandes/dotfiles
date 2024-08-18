@@ -1,3 +1,4 @@
+-- Bottom status bar
 return {
 	{
 		"linrongbin16/lsp-progress.nvim",

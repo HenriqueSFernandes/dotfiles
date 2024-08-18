@@ -1,3 +1,4 @@
+-- Github Copilot
 return {
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",

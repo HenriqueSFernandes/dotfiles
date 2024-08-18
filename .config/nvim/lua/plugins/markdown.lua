@@ -1,3 +1,4 @@
+-- Markdown preview
 return {
 	"toppair/peek.nvim",
 	event = { "VeryLazy" },

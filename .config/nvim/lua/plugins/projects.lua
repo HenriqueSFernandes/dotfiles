@@ -1,3 +1,4 @@
+-- Projects picker
 return {
 	"coffebar/neovim-project",
 	opts = {

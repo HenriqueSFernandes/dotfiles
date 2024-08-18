@@ -1,3 +1,4 @@
+-- Lsp stuff
 return {
 	{
 		"nikvdp/ejs-syntax",

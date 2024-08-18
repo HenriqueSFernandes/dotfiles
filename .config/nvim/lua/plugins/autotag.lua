@@ -1,3 +1,4 @@
+-- Autotag
 return {
 	{
 		"windwp/nvim-ts-autotag",

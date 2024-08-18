@@ -1,3 +1,4 @@
+-- Ui used for other plugins
 return {
 	{
 		"nvim-telescope/telescope.nvim",

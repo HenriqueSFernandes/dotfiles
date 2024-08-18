@@ -1,3 +1,4 @@
+-- PLugins used for syntax parsing
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",

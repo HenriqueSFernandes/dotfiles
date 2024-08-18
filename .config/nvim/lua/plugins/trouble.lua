@@ -1,3 +1,4 @@
+-- Lists all problems in the code
 return {
   {
     "folke/trouble.nvim",

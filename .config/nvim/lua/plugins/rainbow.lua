@@ -1,3 +1,4 @@
+-- Colors for brackets
 return {
 	"HiPhish/rainbow-delimiters.nvim",
 	--

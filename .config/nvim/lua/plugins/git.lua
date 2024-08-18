@@ -1,3 +1,4 @@
+-- Git plugins
 return {
 	{
 		"kdheepak/lazygit.nvim",
