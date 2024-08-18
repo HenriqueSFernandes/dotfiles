@@ -2,3 +2,6 @@
 	url = https://github.com/maximtrp/ranger-archives.git
 [submodule ".config/ranger/plugins/ranger_udisk_menu"]
 	url = https://github.com/SL-RU/ranger_udisk_menu
+[submodule ".config/kitty/kitty_grab"]
+	path = .config/kitty/kitty_grab
+	url = https://github.com/yurikhan/kitty_grab

@@ -79,7 +79,6 @@ eval $(thefuck --alias)
 alias oldcat=$(which cat)
 alias cat="bat"
 alias fds="fuck"
-alias lv="lvim"
 alias viteinit="npm create vite@latest"
 eval "$(zoxide init zsh)"
 alias cd="z"
