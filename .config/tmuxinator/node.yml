@@ -15,8 +15,3 @@ windows:
             -  #empty
         - sh:
             - npm start
-  - git:
-      layout: even-horizontal
-      panes:
-        - sh:
-          - lazygit
