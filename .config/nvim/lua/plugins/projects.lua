@@ -15,7 +15,7 @@ return {
 	init = function()
 		-- enable saving the state of plugins in the session
 		vim.opt.sessionoptions:append("globals") -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
-		vim.keymap.set({ "n", "v" }, "<C-l>", "<cmd>:Telescope neovim-project discover<cr>", { desc = "Projects" })
+		vim.keymap.set({ "n", "v" }, "<C-S-l>", "<cmd>:Telescope neovim-project discover<cr>", { desc = "Projects" })
 	end,
 	dependencies = {
 		{ "nvim-lua/plenary.nvim" },
