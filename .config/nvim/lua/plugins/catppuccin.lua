@@ -6,7 +6,7 @@ return {
   config = function()
     require("catppuccin").setup({
       flavour = "mocha",
-      transparent_background = true,
+      -- transparent_background = true,
       integrations = {
         markdown = true,
         mason = false,
