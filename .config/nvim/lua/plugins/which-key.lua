@@ -12,6 +12,7 @@ return {
       { "<leader>x",  group = "Trouble" },
       { "<leader>t",  group = "Test" },
       { "<leader>f",  group = "Flutter" },
+      { "<leader>g",  group = "Git" },
     })
   end,
 }
