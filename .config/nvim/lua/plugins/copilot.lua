@@ -11,8 +11,7 @@ return {
 			local chat = require("CopilotChat")
 			chat.setup({
 				window = {
-					layout = "vertical",
-					width = 0.3,
+					layout = "float",
 				},
 			})
 			vim.cmd("Copilot disable")

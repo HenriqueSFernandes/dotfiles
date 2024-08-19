@@ -1,0 +1,18 @@
+# /home/ricky/.config/tmuxinator/minebot.yml
+
+name: gox
+root: ~/Desktop/GoX-App
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - sh:
+          - cd lib && nvim main.dart
+  - flutter:
+      layout: even-horizontal
+      panes:
+        - sh:
+            -  #empty
+        - sh:
+            -  #empty
