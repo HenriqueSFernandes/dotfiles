@@ -9,6 +9,7 @@ vim.cmd("autocmd InsertLeave * :set rnu")
 vim.cmd("set mousemoveevent")
 vim.cmd("set whichwrap+=<,>,[,]")
 vim.cmd("set cursorline")
+vim.cmd("map <C-d> Lzz")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
