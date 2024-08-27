@@ -10,6 +10,8 @@ vim.cmd("set mousemoveevent")
 vim.cmd("set whichwrap+=<,>,[,]")
 vim.cmd("set cursorline")
 vim.cmd("map <C-d> Lzz")
+vim.cmd("set foldmethod=indent")
+vim.cmd("set foldlevel=999")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"

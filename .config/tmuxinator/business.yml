@@ -1,7 +1,7 @@
 # /home/ricky/.config/tmuxinator/minebot.yml
 
-name: gox
-root: ~/Desktop/GoX-App
+name: business
+root: ~/Desktop/business_empire
 
 windows:
   - editor:

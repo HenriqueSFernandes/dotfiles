@@ -8,6 +8,7 @@ return {
 			local builtin = require("telescope.builtin")
 			vim.keymap.set({ "n", "v" }, "<C-p>", builtin.find_files, {})
 			vim.keymap.set({ "n", "v" }, "<C-f>", builtin.live_grep, {})
+			vim.keymap.set({ "n", "v" }, "gu", builtin.lsp_references, { desc = "Find Usages" })
 		end,
 	},
 	{
