@@ -10,6 +10,7 @@ vim.cmd("set mousemoveevent")
 vim.cmd("set whichwrap+=<,>,[,]")
 vim.cmd("set cursorline")
 vim.cmd("map <C-d> Lzz")
+vim.cmd("map <C-u> Hzz")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -21,3 +22,13 @@ vim.keymap.set("n", "<S-CR>", "<Esc>A;<Esc>")
 vim.keymap.set("n", "<leader>n", "<cmd>nohls<cr>", { desc = "Hide search results" })
 
 vim.cmd("autocmd BufNewFile,BufRead *.ejs set filetype=html")
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+	pattern = { "*.norg" },
+	command = "set conceallevel=3",
+})
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+	pattern = { "*.norg" },
+	command = "Neorg render-latex",
+})
