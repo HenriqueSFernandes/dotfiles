@@ -14,6 +14,7 @@ return {
       { "<leader>t",  group = "Test" },
       { "<leader>f",  group = "Flutter" },
       { "<leader>g",  group = "Git" },
+      { "<leader>h",  group = "Harpoon" },
     })
   end,
 }
