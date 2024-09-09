@@ -13,13 +13,13 @@ return {
 				options = {
 					theme = "catppuccin",
 				},
-				sections = {
-					lualine_c = {
-						function()
-							return require("lsp-progress").progress()
-						end,
-					},
-				},
+				-- sections = {
+				-- 	lualine_c = {
+				-- 		function()
+				-- 			return require("lsp-progress").progress()
+				-- 		end,
+				-- 	},
+				-- },
 			})
 		end,
 	},
