@@ -7,6 +7,9 @@ return {
 		"rcarriga/nvim-notify",
 	},
 	config = function()
+		require("notify").setup({
+			timeout = 500,
+		})
 		require("noice").setup({
 			lsp = {
 				override = {

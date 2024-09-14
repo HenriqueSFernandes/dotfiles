@@ -1,0 +1,22 @@
+# /home/ricky/.config/tmuxinator/minebot.yml
+
+name: laravel
+root: ~/Desktop/LBAW/example
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - nvim artisan
+  - server:
+      layout: even-horizontal
+      panes:
+        - sh:
+            -  #empty
+        - sh:
+            - php artisan serve
+  - files:
+      layout: even-horizontal
+      panes:
+        - sh:
+            - ranger

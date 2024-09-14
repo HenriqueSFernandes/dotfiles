@@ -22,6 +22,11 @@ vim.keymap.set("n", "<S-CR>", "<Esc>A;<Esc>")
 vim.keymap.set("n", "<leader>n", "<cmd>nohls<cr>", { desc = "Hide search results" })
 
 vim.cmd("autocmd BufNewFile,BufRead *.ejs set filetype=html")
+-- vim.filetype.add({
+-- 	pattern = {
+-- 		[".*%.blade%.php"] = "blade",
+-- 	},
+-- })
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 	pattern = { "*.norg" },

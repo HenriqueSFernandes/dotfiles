@@ -18,6 +18,7 @@ export PATH=$PATH:/home/ricky/.spicetify
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/home/ricky/.local/share/flatpak/exports/share
+export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 eval "$(tmuxifier init -)"
 

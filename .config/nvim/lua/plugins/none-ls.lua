@@ -13,7 +13,8 @@ return {
 				null_ls.builtins.formatting.clang_format,
 				null_ls.builtins.formatting.shellharden,
 				null_ls.builtins.formatting.djlint,
-				null_ls.builtins.formatting.dart_format
+				null_ls.builtins.formatting.dart_format,
+				null_ls.builtins.formatting.blade_formatter,
 			},
 		})
 		vim.keymap.set({ "n", "i", "v" }, "<A-S-f>", vim.lsp.buf.format, {})
