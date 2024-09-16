@@ -2,6 +2,18 @@
 return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
+		dependencies = {
+			"onsails/lspkind-nvim",
+		},
+		opts = function()
+			return {
+				formatting = {
+					format = require("lspkind").cmp_format({
+						before = require("tailwind-tools.cmp").lspkind_format,
+					}),
+				},
+			}
+		end,
 	},
 	{
 		"L3MON4D3/LuaSnip",
