@@ -20,6 +20,11 @@ return {
 						require("telescope.themes").get_dropdown({}),
 					},
 				},
+				-- pickers = {
+				-- 	find_files = {
+				-- 		hidden = true,
+				-- 	},
+				-- },
 			})
 			require("telescope").load_extension("ui-select")
 			require("telescope").load_extension("flutter")

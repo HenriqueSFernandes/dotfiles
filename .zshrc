@@ -22,17 +22,6 @@ export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 eval "$(tmuxifier init -)"
 
-function yy() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-
-alias r="ranger"
-alias bt="bashtop"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
@@ -68,7 +57,6 @@ _fzf_comprun() {
 
 export PATH="$PATH:$HOME/Applications"
 
-
 export CHROME_EXECUTABLE=/usr/bin/firefox
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -85,3 +73,7 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 alias mux="tmuxinator"
 alias lg="lazygit"
+alias r="ranger"
+alias bt="bashtop"
+
+[ -f "/home/ricky/.ghcup/env" ] && . "/home/ricky/.ghcup/env" # ghcup-env
