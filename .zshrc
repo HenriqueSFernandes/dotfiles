@@ -75,5 +75,6 @@ alias mux="tmuxinator"
 alias lg="lazygit"
 alias r="ranger"
 alias bt="bashtop"
+alias ld="lazydocker"
 
 [ -f "/home/ricky/.ghcup/env" ] && . "/home/ricky/.ghcup/env" # ghcup-env

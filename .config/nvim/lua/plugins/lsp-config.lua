@@ -66,9 +66,21 @@ return {
 			-- lspconfig.clangd.setup({
 			--      capabilities = capabilities,
 			--    })
-			-- lspconfig.emmet_language_server.setup({
-			--      capabilities = capabilities,
-			--    })
+			lspconfig.emmet_language_server.setup({
+				filetypes = {
+					"css",
+					"eruby",
+					"html",
+					"javascript",
+					"javascriptreact",
+					"less",
+					"sass",
+					"scss",
+					"pug",
+					"typescriptreact",
+					"php",
+				},
+			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n", "v" }, "<leader>v", vim.lsp.buf.code_action, { desc = "Code Action" })
