@@ -1,0 +1,55 @@
+:root {
+  --main: #82aaed;
+  --secondary: #444444;
+  --background: #1e1e2f;
+  --background-transparent: #1e1e2fb3;
+  font-size: 5px;
+}
+
+.client-image {
+  margin: 15px;
+}
+
+.client-index {
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: 3px solid rgba(80, 90, 120, 0.8);
+  background-color: rgba(20, 20, 20, 1);
+}
+
+.client {
+  border-radius: 15px;
+  border: 3px solid var(--secondary);
+  background-color: var(--background-transparent);
+}
+
+.client:hover {
+  background-color: var(background);
+}
+
+.client_active {
+  border: 3px solid var(--main);
+  background-color: var(background);
+}
+
+.workspace {
+  font-weight: bold;
+  border-radius: 15px;
+  border: 3px solid rgba(70, 80, 90, 0.8);
+  background-color: var(--background-transparent);
+}
+
+.workspace_special {
+  border: 3px solid rgba(0, 255, 0, 0.4);
+}
+
+.workspaces {
+  margin: 10px;
+}
+
+window {
+  border-radius: 15px;
+  opacity: 1;
+  border: 3px solid var(--main);
+}

@@ -13,6 +13,7 @@ return {
 					config = {
 						workspaces = {
 							notes = "~/notes",
+							rcom = "~/Desktop/RCOM/notes"
 						},
 					},
 				},
