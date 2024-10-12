@@ -1,0 +1,22 @@
+# /home/ricky/.config/tmuxinator/minebot.yml
+
+name: nasa
+root: ~/Desktop/cosmic_pathways
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - nvim .
+  - server:
+      layout: even-horizontal
+      panes:
+        - sh:
+            -  #empty
+        - sh:
+            - npm run dev
+  - files:
+      layout: even-horizontal
+      panes:
+        - sh:
+            - ranger
