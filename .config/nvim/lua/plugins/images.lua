@@ -2,6 +2,12 @@
 return {
 	"3rd/image.nvim",
 	config = function()
-		require("image").setup()
+		require("image").setup({
+			integrations = {
+				markdown = {
+					enabled = false,
+				},
+			},
+		})
 	end,
 }
