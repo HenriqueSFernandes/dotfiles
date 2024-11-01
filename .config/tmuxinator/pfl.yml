@@ -1,7 +1,7 @@
 # /home/ricky/.config/tmuxinator/minebot.yml
 
 name: pfl
-root: ~/Desktop/PFL
+root: ~/Desktop/PFL/proj1
 
 windows:
   - editor:
@@ -9,3 +9,5 @@ windows:
       panes:
         - nvim .
         - ghci
+        - sh:
+            -  #

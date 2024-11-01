@@ -1,0 +1,25 @@
+name: rcom
+root: ~/Desktop/RCOM
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - sh:
+            - nvim .
+  - serial:
+      layout: even-horizontal
+      panes:
+        - sh:
+            -  #
+        - sh:
+            -  #
+  - cable:
+      layout: even-horizontal
+      panes:
+        - sh:
+            - sudo make run_cable
+  - files:
+      layout: even-horizontal
+      panes:
+        - ranger

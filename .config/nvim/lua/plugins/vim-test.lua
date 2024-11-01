@@ -1,15 +1,20 @@
 -- Plugins to run tests
 return {
-	"vim-test/vim-test",
+	"nvim-neotest/neotest",
 	dependencies = {
-		"preservim/vimux",
+		"nvim-neotest/nvim-nio",
+		"nvim-lua/plenary.nvim",
+		"antoinemadec/FixCursorHold.nvim",
+		"nvim-treesitter/nvim-treesitter",
+		"mrcjkb/neotest-haskell",
 	},
-	config = function()
-		vim.keymap.set("n", "<leader>tn", ":TestNearest<CR>", { desc = "Test Nearest" })
-		vim.keymap.set("n", "<leader>tf", ":TestFile<CR>", { desc = "Test File" })
-		vim.keymap.set("n", "<leader>ts", ":TestSuite<CR>", { desc = "Test Suite" })
-		vim.keymap.set("n", "<leader>tl", ":TestLast<CR>", { desc = "Test Last" })
-		vim.keymap.set("n", "<leader>tv", ":TestVisit<CR>", { desc = "Test Visit" })
-		vim.cmd("let test#strategy = 'vimux'")
-	end,
+	config = function ()
+		require("neotest").setup({
+			adapters = {
+				require("neotest-haskell") {
+					frameworks = {"hspec"}
+				}
+			}
+		})
+	end
 }

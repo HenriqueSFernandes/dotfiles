@@ -57,7 +57,7 @@ _fzf_comprun() {
 
 export PATH="$PATH:$HOME/Applications"
 
-export CHROME_EXECUTABLE=/usr/bin/firefox
+export CHROME_EXECUTABLE=/home/ricky/.local/share/AppImage/ZenBrowser.AppImage
 export EDITOR='nvim'
 export VISUAL='nvim'
 eval "$(fzf --zsh)"
@@ -77,5 +77,7 @@ alias ld="lazydocker"
 alias r="ranger"
 alias bt="bashtop"
 alias ld="lazydocker"
+alias dou="sudo docker compose up -d"
+alias dod="sudo docker compose down"
 
 [ -f "/home/ricky/.ghcup/env" ] && . "/home/ricky/.ghcup/env" # ghcup-env
