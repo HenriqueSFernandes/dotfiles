@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if pgrep -x "waybar" > /dev/null; then
-	pkill waybar
+if pgrep -x "ags" > /dev/null; then
+	pkill ags
 else
-  waybar
+  ags
 fi

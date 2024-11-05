@@ -81,3 +81,6 @@ alias dou="sudo docker compose up -d"
 alias dod="sudo docker compose down"
 
 [ -f "/home/ricky/.ghcup/env" ] && . "/home/ricky/.ghcup/env" # ghcup-env
+
+# bun completions
+[ -s "/home/ricky/.bun/_bun" ] && source "/home/ricky/.bun/_bun"
