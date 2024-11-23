@@ -84,3 +84,6 @@ alias dod="sudo docker compose down"
 
 # bun completions
 [ -s "/home/ricky/.bun/_bun" ] && source "/home/ricky/.bun/_bun"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

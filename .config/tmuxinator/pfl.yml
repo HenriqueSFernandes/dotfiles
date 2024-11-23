@@ -1,7 +1,7 @@
 # /home/ricky/.config/tmuxinator/minebot.yml
 
 name: pfl
-root: ~/Desktop/PFL/proj1
+root: ~/Desktop/PFL/
 
 windows:
   - editor:
