@@ -1,7 +1,7 @@
 # /home/ricky/.config/tmuxinator/minebot.yml
 
-name: uni
-root: ~/Desktop/NIAEFEUP/uni/packages/uni_app
+name: uni_ui
+root: ~/Desktop/NIAEFEUP/uni/packages/uni_ui
 
 windows:
   - editor:

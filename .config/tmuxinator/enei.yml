@@ -1,0 +1,26 @@
+# /home/ricky/.config/tmuxinator/minebot.yml
+
+name: enei
+root: ~/Desktop/NIAEFEUP/enei/website
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - nvim .
+  - server:
+      layout: tiled
+      panes:
+        - sh:
+            -  #empty
+        - sh:
+            - pnpm run dev
+        - sh:
+            - node ace jobs:listen
+        - sh:
+            - cd .. & docker compose up -d
+  - files:
+      layout: even-horizontal
+      panes:
+        - sh:
+            - ranger

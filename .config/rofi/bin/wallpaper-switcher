@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 rofi_command="rofi -dmenu -i -p Wallpaper -theme $HOME/.config/rofi/config/launcher.rasi"
 
-dir="/home/ricky/Pictures/Wallpapers"
+dir="$HOME/Pictures/Wallpapers"
 declare -a files
 
 getWallpaper() {

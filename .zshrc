@@ -4,7 +4,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search artisan)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,8 +67,7 @@ alias ls="exa --color=always --icons=always "
 eval $(thefuck --alias)
 alias oldcat=$(which cat)
 alias cat="bat"
-alias fds="fuck"
-alias viteinit="npm create vite@latest"
+alias icat="kitten icat"
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias mux="tmuxinator"
@@ -76,9 +75,8 @@ alias lg="lazygit"
 alias ld="lazydocker"
 alias r="ranger"
 alias bt="bashtop"
-alias ld="lazydocker"
-alias dou="sudo docker compose up -d"
-alias dod="sudo docker compose down"
+alias sicstus="rlwrap sicstus"
+alias adbscreen="adb exec-out screencap -p > screen.png"
 
 [ -f "/home/ricky/.ghcup/env" ] && . "/home/ricky/.ghcup/env" # ghcup-env
 
@@ -87,3 +85,9 @@ alias dod="sudo docker compose down"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/ricky/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/home/ricky/Applications/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/ricky/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ricky/Applications/google-cloud-sdk/completion.zsh.inc'; fi

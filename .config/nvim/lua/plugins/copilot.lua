@@ -2,17 +2,27 @@
 return {
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
-		branch = "canary",
+		branch = "main",
 		dependencies = {
 			{ "github/copilot.vim" },
 			{ "nvim-lua/plenary.nvim" },
 		},
+		build = "make tiktoken",
 		config = function()
 			local chat = require("CopilotChat")
 			chat.setup({
 				window = {
-					layout = "float",
+					layout = "vertical",
 				},
+				-- contexts = {
+				-- 	"buffer", -- Current buffer
+				-- 	"buffers", -- All open buffers
+				-- 	"file", -- Current file
+				-- 	"files:all", -- All files in the workspace/project
+				-- 	"git", -- Git context
+				-- 	"url", -- Context from URLs
+				-- 	"register", -- Context from register
+				-- },
 			})
 			vim.cmd("Copilot disable")
 			vim.keymap.set("n", "<leader>cc", chat.toggle, { desc = "Toggle Chat Window" })
@@ -32,6 +42,12 @@ return {
 				":CopilotChatCommitStaged<CR>",
 				{ desc = "Generate Staged Commit Message" }
 			)
+			vim.keymap.set({ "n", "v" }, "<leader>cq", function()
+				local input = vim.fn.input("Quick Chat: ")
+				if input ~= "" then
+					require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+				end
+			end, { desc = "CopilotChat - Quick chat" })
 		end,
 	},
 }
