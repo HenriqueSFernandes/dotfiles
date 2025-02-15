@@ -1,3 +1,5 @@
+> Note: I just changed OS, from EndeavourOS to Arch. The new dotfiles will be available soon.
+
 # Dotfiles by RICKY
 
 Here you can find the dotfiles for my system.  
