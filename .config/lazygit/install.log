@@ -1,0 +1,9 @@
+[19:22:10 2025-02-07] FETCHING Version 2.39.0
+[19:22:10 2025-02-07] CREATING /home/ricky/.spicetify
+[19:22:10 2025-02-07] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.39.0/spicetify-2.39.0-linux-amd64.tar.gz
+[19:22:11 2025-02-07] EXTRACTING /home/ricky/.spicetify/spicetify.tar.gz
+[19:22:11 2025-02-07] SETTING EXECUTABLE PERMISSIONS TO /home/ricky/.spicetify/spicetify
+[19:22:11 2025-02-07] REMOVING /home/ricky/.spicetify/spicetify.tar.gz
+[19:22:11 2025-02-07] spicetify path already set in /home/ricky/.zshrc, continuing...
+[19:22:11 2025-02-07] spicetify v2.39.0 was installed successfully to /home/ricky/.spicetify
+[19:22:11 2025-02-07] Run 'spicetify --help' to get started

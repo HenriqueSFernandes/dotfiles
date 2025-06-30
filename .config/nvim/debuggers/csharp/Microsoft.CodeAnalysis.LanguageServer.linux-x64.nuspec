@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.CodeAnalysis.LanguageServer.linux-x64</id>
+    <version>5.0.0-1.25119.1</version>
+    <authors>Microsoft</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Icon.png</icon>
+    <projectUrl>https://github.com/dotnet/roslyn</projectUrl>
+    <description>Package Description
+      More details at https://aka.ms/roslyn-packages
+      This package was built from the source at https://github.com/dotnet/roslyn/commit/fc18ffb511f7797c236fa9f0491c11ab570b8029.</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>Roslyn CodeAnalysis Compiler CSharp VB VisualBasic Parser Scanner Lexer Emit CodeGeneration Metadata IL Compilation Scripting Syntax Semantics</tags>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/dotnet/roslyn" branch="release/dev18.0" commit="fc18ffb511f7797c236fa9f0491c11ab570b8029" />
+    <dependencies>
+      <group targetFramework="net9.0">
+        <dependency id="Microsoft.CodeAnalysis.CSharp.Features" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.ExternalAccess.AspNetCore" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.ExternalAccess.CompilerDeveloperSDK" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.LanguageServer.ExternalAccess.Copilot" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.ExternalAccess.VisualDiagnostics" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.LanguageServer.Protocol" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.ExternalAccess.Xaml" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.Workspaces.MSBuild" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.Remote.Workspaces" version="[5.0.0-1.25119.1, 5.0.0-1.25119.1]" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Razor.ExternalAccess.RoslynWorkspace" version="9.0.0-preview.25064.4" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.FileSystemGlobbing" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Console" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.ServiceHub.Framework" version="4.7.32-beta" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.TestPlatform.ObjectModel" version="17.5.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.TestPlatform.TranslationLayer" version="17.5.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Composition" version="17.12.17-preview" exclude="Build,Analyzers" />
+        <dependency id="NuGet.ProjectModel" version="6.8.0-rc.112" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.bundle_green" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.core" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.provider.dynamic_cdecl" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="System.CommandLine" version="2.0.0-beta4.24528.1" exclude="Build,Analyzers" />
+        <dependency id="Humanizer.Core" version="2.14.1" exclude="Compile,Build,Analyzers" />
+        <dependency id="ICSharpCode.Decompiler" version="8.2.0.7535" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Build" version="17.7.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Build.Framework" version="17.7.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Build.Tasks.Core" version="17.7.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Build.Utilities.Core" version="17.7.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CSharp" version="4.7.0" exclude="Compile,Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.AnalyzerUtilities" version="3.3.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.Analyzers" version="3.11.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.CodeAnalysis.Elfie" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.DiaSymReader" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Options" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Primitives" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NETCore.Platforms" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.ServiceHub.Client" version="4.2.1017" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Composition.Analyzers" version="17.12.17-preview" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.RemoteControl" version="16.3.52" exclude="Compile,Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Telemetry" version="17.14.2" exclude="Compile,Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Threading" version="17.12.13-preview" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Utilities.Internal" version="16.3.90" exclude="Compile,Build,Analyzers" />
+        <dependency id="Microsoft.Win32.Registry" version="5.0.0" exclude="Compile,Build,Analyzers" />
+        <dependency id="Nerdbank.Streams" version="2.11.79" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+        <dependency id="SQLitePCLRaw.lib.e_sqlite3" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="StreamJsonRpc" version="2.20.8-beta" exclude="Build,Analyzers" />
+        <dependency id="System.CodeDom" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.ComponentModel.Composition" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Composition" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Configuration.ConfigurationManager" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Diagnostics.EventLog" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.IO.Pipelines" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Management" version="7.0.0" exclude="Compile,Build,Analyzers" />
+        <dependency id="System.Memory" version="4.5.5" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Metadata" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Resources.Extensions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.CompilerServices.Unsafe" version="6.0.0" exclude="Compile,Build,Analyzers" />
+        <dependency id="System.Security.Cryptography.Pkcs" version="7.0.2" exclude="Build,Analyzers" />
+        <dependency id="System.Security.Cryptography.ProtectedData" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Security.Cryptography.Xml" version="7.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.Security.Permissions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Json" version="8.0.5" exclude="Build,Analyzers" />
+        <dependency id="System.Threading.Channels" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Threading.Tasks.Dataflow" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Windows.Extensions" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

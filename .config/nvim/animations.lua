@@ -1,0 +1,19 @@
+-- return {
+-- 	"declancm/cinnamon.nvim",
+-- 	version = "*", -- use latest release
+-- 	config = function(_, opts)
+-- 		local cinnamon = require("cinnamon")
+-- 		cinnamon.setup({
+-- 			keymaps = {
+-- 				basic = true,
+-- 				extra = false,
+-- 			},
+-- 		})
+-- 		vim.keymap.set("n", "<C-U>", function()
+-- 			cinnamon.scroll("<C-U>zz")
+-- 		end)
+-- 		vim.keymap.set("n", "<C-D>", function()
+-- 			cinnamon.scroll("<C-D>zz")
+-- 		end)
+-- 	end,
+-- }

@@ -1,0 +1,63 @@
+layout {
+	cwd "~/Desktop/ARMIS/virtual-test-set"
+	default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+
+    tab name="VTS" split_direction="horizontal" {
+			pane {
+			cwd "Common/ARMIS.VirtualTestSet.Common.API"
+			command "dotnet"
+			args "run"
+			}
+			pane {
+			cwd "Core/ARMIS.VirtualTestSet.Core.API"
+			command "dotnet"
+			args "run"
+			}
+			pane {
+			cwd "Test Execution Engine/ARMIS.VirtualTestSet.TestExecutionEngine.API"
+			command "dotnet"
+			args "run"
+			}
+			pane {
+			cwd "Test Specification/ARMIS.VirtualTestSet.TestSpecification.API"
+			command "dotnet"
+			args "run"
+			}
+			pane {
+			cwd "Core/ARMIS.VirtualTestSet.Core.LicenseManager.API"
+			command "dotnet"
+			args "run"
+			}
+			pane {
+			cwd "Agent/ARMIS.VirtualTestSet.Agent.API"
+			command "dotnet"
+			args "run"
+			}
+			// pane {
+			// cwd "Simulation/ARMIS.VirtualTestSet.Simulation.Server"
+			// command "dotnet"
+			// args "run"
+			// }
+			// pane {
+			// cwd "Simulation/ARMIS.VirtualTestSet.Simulation.Client"
+			// command "sh"
+			// args "-c" "sleep 5 && dotnet run"
+			// }
+			pane {
+			cwd "UI/ARMIS.VirtualTestSet.UI/ClientApp"
+			command "npm"
+			args "run" "start"
+			}
+		}
+}
+
+

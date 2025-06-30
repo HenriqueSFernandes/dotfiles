@@ -1,0 +1,10 @@
+{
+	"custom/kbvariant": {
+		"icon": {
+			"true": "🌐",
+			"false": "⌨️"
+		},
+		"execute": "./kblayout.sh",
+		"interval": 5000
+	}
+}
