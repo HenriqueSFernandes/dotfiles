@@ -5,6 +5,7 @@ return {
 		projects = { -- define project roots
 			"~/Desktop/ARMIS/virtual-test-set/*",
 			"~/Desktop/ARMIS/TTC/*",
+			"~/Desktop/Repositories/ClipNest/*",
 		},
 	},
 	init = function()

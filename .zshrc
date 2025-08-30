@@ -93,3 +93,10 @@ autoload -Uz compinit
 compinit
 
 source ~/.bash_profile
+
+# bun completions
+[ -s "/home/ricky/.bun/_bun" ] && source "/home/ricky/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

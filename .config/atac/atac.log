@@ -1,1 +1,29 @@
-[2m2025-06-30T14:02:45.552624Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: q
+[2m2025-07-26T19:23:28.351745Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: j
+[2m2025-07-26T19:23:30.220683Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: j
+[2m2025-07-26T19:23:31.159299Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: j
+[2m2025-07-26T19:23:31.341340Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: j
+[2m2025-07-26T19:23:32.835092Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Shift-n
+[2m2025-07-26T19:23:35.626057Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: l
+[2m2025-07-26T19:23:35.907117Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: h
+[2m2025-07-26T19:23:36.387535Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: h
+[2m2025-07-26T19:23:37.111061Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Enter
+[2m2025-07-26T19:23:39.343809Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Esc
+[2m2025-07-26T19:23:39.816836Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: j
+[2m2025-07-26T19:23:41.107145Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Shift-n
+[2m2025-07-26T19:23:42.164717Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Enter
+[2m2025-07-26T19:23:45.205272Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: i
+[2m2025-07-26T19:23:45.489650Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Shift-n
+[2m2025-07-26T19:23:45.577829Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Shift-i
+[2m2025-07-26T19:23:45.769377Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: c
+[2m2025-07-26T19:23:45.840497Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: i
+[2m2025-07-26T19:23:46.009533Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: o
+[2m2025-07-26T19:23:46.205498Z[0m [32m INFO[0m [2matac::app::business_logic::collection[0m[2m:[0m Collection "iNIcio" created
+[2m2025-07-26T19:23:46.205539Z[0m [32m INFO[0m [2matac::app::files::collection[0m[2m:[0m Saving collection "iNIcio"
+[2m2025-07-26T19:23:46.205658Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Enter
+[2m2025-07-26T19:23:46.839526Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: j
+[2m2025-07-26T19:23:47.760484Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Shift-n
+[2m2025-07-26T19:23:48.967317Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Enter
+[2m2025-07-26T19:23:49.949086Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Esc
+[2m2025-07-26T19:23:50.509055Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Shift-n
+[2m2025-07-26T19:23:52.037567Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: l
+[2m2025-07-26T19:23:52.608015Z[0m [34mDEBUG[0m [2matac::tui::events[0m[2m:[0m Key pressed: Enter
