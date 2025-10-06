@@ -1,4 +1,4 @@
-theme = catppuccin-mocha
+theme = catppuccin-mocha.conf
 font-family = FiraCode Nerd Font
 shell-integration = zsh
 font-feature = +calt, +liga, +dlig

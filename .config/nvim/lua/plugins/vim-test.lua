@@ -6,15 +6,8 @@ return {
 		"nvim-lua/plenary.nvim",
 		"antoinemadec/FixCursorHold.nvim",
 		"nvim-treesitter/nvim-treesitter",
-		"mrcjkb/neotest-haskell",
 	},
-	config = function ()
-		require("neotest").setup({
-			adapters = {
-				require("neotest-haskell") {
-					frameworks = {"hspec"}
-				}
-			}
-		})
-	end
+	config = function()
+		require("neotest").setup({})
+	end,
 }
