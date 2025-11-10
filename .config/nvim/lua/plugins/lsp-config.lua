@@ -52,9 +52,9 @@ return {
 			{ "folke/neoconf.nvim", cmd = "Neoconf", config = true },
 		},
 		config = function()
-			require("lspconfig").jdtls.setup({})
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+			require("lspconfig").jdtls.setup({})
 			-- lspconfig.lua_ls.setup({
 			-- 	capabilities = capabilities,
 			-- })

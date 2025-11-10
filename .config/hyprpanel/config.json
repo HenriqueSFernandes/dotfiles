@@ -70,7 +70,7 @@
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen Browser",
   "menus.dashboard.shortcuts.left.shortcut1.icon": "",
   "menus.dashboard.controls.enabled": true,
-  "menus.clock.weather.location": "Porto",
+  "menus.clock.weather.location": "Porto, Portugal",
   "menus.clock.weather.key": "db6a5056ad3d450ba3212801240411",
   "bar.clock.format": "%a %b %d  %I:%M %p",
   "bar.workspaces.ignored": "-98|-97",
