@@ -1,0 +1,18 @@
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
+
+[[opener.set-wallpaper]]
+run  = 'hyprctl hyprpaper reload ,"$1"'
+for  = "linux"
+desc = "Set as wallpaper"
+
+[[open.prepend_rules]]
+mime = "image/*"
+use  = [ "set-wallpaper", "open" ]

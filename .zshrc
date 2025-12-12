@@ -84,7 +84,16 @@ alias adbscreen="adb exec-out screencap -p > screen.png"
 alias ze="zellij"
 alias uni="zellij -l uni"
 alias hpedit="nvim ~/.config/hypr/hyprland.conf"
+alias fucking="sudo"
 eval $(thefuck --alias)
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 [ -f "/home/ricky/.ghcup/env" ] && . "/home/ricky/.ghcup/env" # ghcup-env
 . "/home/ricky/.deno/env"

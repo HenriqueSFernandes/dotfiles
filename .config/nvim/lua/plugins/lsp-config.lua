@@ -10,11 +10,37 @@ return {
 			require("mason").setup()
 		end,
 	},
+	-- {
+	-- 	"nvim-java/nvim-java",
+	-- 	config = function()
+	-- 		require("java").setup()
+	-- 	end,
+	-- },
 	{
-		"nvim-java/nvim-java",
-		config = function()
-			require("java").setup()
+		"ray-x/go.nvim",
+		dependencies = { -- optional packages
+			"ray-x/guihua.lua",
+			"neovim/nvim-lspconfig",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		opts = {
+			-- lsp_keymaps = false,
+			-- other options
+		},
+		config = function(lp, opts)
+			require("go").setup(opts)
+			local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				pattern = "*.go",
+				callback = function()
+					require("go.format").goimports()
+				end,
+				group = format_sync_grp,
+			})
 		end,
+		event = { "CmdlineEnter" },
+		ft = { "go", "gomod" },
+		build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
@@ -53,8 +79,12 @@ return {
 		},
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
-			require("lspconfig").jdtls.setup({})
+			-- local lspconfig = require("lspconfig")
+
+			-- require("lspconfig").jdtls.setup({})
+			--
+			vim.lsp.config("jdtls", {})
+			vim.lsp.enable("jdtls")
 			-- lspconfig.lua_ls.setup({
 			-- 	capabilities = capabilities,
 			-- })
@@ -70,7 +100,7 @@ return {
 			-- lspconfig.clangd.setup({
 			--      capabilities = capabilities,
 			--    })
-			lspconfig.emmet_language_server.setup({
+			vim.lsp.config("emmet_language_server", {
 				filetypes = {
 					"css",
 					"eruby",
