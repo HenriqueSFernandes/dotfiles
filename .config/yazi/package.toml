@@ -18,5 +18,15 @@ use = "yazi-rs/plugins:jump-to-char"
 rev = "eaf6920"
 hash = "ce67445ebb1bf3d97b8e44f50904b2c5"
 
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "e6007f7"
+hash = "e0b1051849756dd72fca874c320259a"
+
+[[plugin.deps]]
+use = "uhs-robert/sshfs"
+rev = "5edff3b"
+hash = "e92138f6eb884bef96d92b2d114ac927"
+
 [flavor]
 deps = []
