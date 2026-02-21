@@ -1,3 +1,12 @@
+> ⚠️ **Deprecation Notice**
+>
+> These dotfiles are being deprecated as I am migrating my setup to **NixOS**.
+>
+> My new configuration (Nix-based dotfiles) can be found here:  
+> 👉 https://github.com/HenriqueSFernandes/dotfiles-nix
+>
+> This repository is no longer actively maintained.
+
 # Dotfiles by RICKY
 
 Here you can find the dotfiles for my system.  
